@@ -1,4 +1,4 @@
-package pages;
+package pagesSwagLap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +19,8 @@ public class CheckOutOverviewPage {
     }
 
 
-    public void clickOnFinishBtn (){
+    public FinishPage clickOnFinishBtn (){
         driver.findElement(FinishBtn).click();
+        return  new FinishPage(driver);
     }
 }

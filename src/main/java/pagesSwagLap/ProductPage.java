@@ -1,4 +1,4 @@
-package pages;
+package pagesSwagLap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,11 +20,13 @@ public class ProductPage {
         return ProductPrice;
     }
 
-    public void addElementToCart (){
+    public ProductPage addElementToCart (){
         driver.findElement(addElementToCart).click();
+        return this;
     }
 
-    public void clickOnCartLink (){
+    public CartPage clickOnCartLink (){
         driver.findElement(cartLink).click();
+        return new CartPage(driver);
     }
 }

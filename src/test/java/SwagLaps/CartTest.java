@@ -2,7 +2,7 @@ package SwagLaps;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.*;
+import pagesSwagLap.*;
 
 public class CartTest extends BaseTest{
 

@@ -1,4 +1,4 @@
-package pages;
+package pagesSwagLap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,9 +21,10 @@ public class HomePage {
     By productLink=By.xpath("//*[text()='"+productName+"']");
 
     //actions
-    public void openProduct()
+    public ProductPage openProduct()
     {
         driver.findElement(productLink).click();
+        return new ProductPage(driver);
     }
 
 

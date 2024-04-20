@@ -2,10 +2,10 @@ package SwagLaps;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.CartPage;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.ProductPage;
+import pagesSwagLap.CartPage;
+import pagesSwagLap.HomePage;
+import pagesSwagLap.LoginPage;
+import pagesSwagLap.ProductPage;
 
 public class ProductPriceTest  extends BaseTest{
     String expectedPrice= "$49.99";

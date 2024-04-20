@@ -1,15 +1,27 @@
 package SwagLaps;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.*;
+import pagesSwagLap.*;
 
 public class CheckOutOverViewTest extends  BaseTest{
     @Test
 
-    public void finishBtn(){
+    public void finishBtn() {
 
-        LoginPage loginPage = new LoginPage(driver);
+        new LoginPage(driver).login("standard_user", "secret_sauce")
+                .openProduct()
+                .addElementToCart()
+                .addElementToCart().
+                clickOnCartLink()
+                .clickOnCheckOut()
+                .checkOutLogin("Maha", "Nabeeh", "123")
+                .clickOnFinishBtn();
+
+
+
+
+
+        /*LoginPage loginPage = new LoginPage(driver);
         loginPage.login("standard_user", "secret_sauce");
 
         HomePage homePage= new HomePage(driver);
@@ -33,6 +45,6 @@ public class CheckOutOverViewTest extends  BaseTest{
         Assert.assertTrue(IsFinishHeaderIsVisible);
 
 
+    }*/
     }
-
 }

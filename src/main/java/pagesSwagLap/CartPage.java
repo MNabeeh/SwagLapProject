@@ -1,4 +1,4 @@
-package pages;
+package pagesSwagLap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,9 +15,12 @@ public class CartPage {
 
     public By getProductName (){
         return productName;
+
+
     }
-    public void clickOnCheckOut(){
+    public CheckOutInfoPage clickOnCheckOut(){
         driver.findElement(checkOutBtn).click();
+        return new CheckOutInfoPage(driver);
 
     }
 

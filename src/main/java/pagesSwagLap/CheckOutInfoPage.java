@@ -1,4 +1,4 @@
-package pages;
+package pagesSwagLap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,12 +26,14 @@ public class CheckOutInfoPage {
         return headerInfo;
     }
 
-    public void checkOutLogin (String FirstName, String LastName, String CodePostel){
+    public CheckOutOverviewPage checkOutLogin (String FirstName, String LastName, String CodePostel){
 
         driver.findElement(firstname).sendKeys(FirstName);
         driver.findElement(lastname).sendKeys(LastName);
         driver.findElement(codigoPostal).sendKeys(CodePostel);
         driver.findElement(continueBtn).click();
+
+        return new CheckOutOverviewPage(driver);
 
 
 

@@ -2,8 +2,8 @@ package SwagLaps;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.HomePage;
-import pages.LoginPage;
+import pagesSwagLap.HomePage;
+import pagesSwagLap.LoginPage;
 
 public class LoginTest extends BaseTest {
     @Test

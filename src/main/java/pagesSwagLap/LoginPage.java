@@ -1,4 +1,4 @@
-package pages;
+package pagesSwagLap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,12 +21,14 @@ public class LoginPage {
 
 
     //actions
-    public void login(String username, String password)
+    public HomePage login(String username, String password)
     {
 
         driver.findElement(UserName).sendKeys(username);
         driver.findElement(PassWord).sendKeys (password);
         driver.findElement(loginButton).click();
+
+        return new HomePage(driver);
 
     }
 
